@@ -5,9 +5,9 @@
 <hr>
 
 ## Technologies
-HTML
-CSS
-JavaScript
+- HTML
+- CSS
+- JavaScript
 
 <hr>
 <br>
