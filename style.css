@@ -32,7 +32,7 @@ li {
 }
 
 html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -171,7 +171,10 @@ body {
     align-items: center;
     grid-gap: 24px;
     font-family: var(--lato);
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 #content nav::before {
@@ -222,6 +225,7 @@ body {
     background: var(--grey);
     border-radius: 36px 0 0 36px;
     outline: none;
+    width: 100%;
 }
 
 #content nav form .form-input button {
@@ -273,6 +277,8 @@ body {
     width: 100%;
     padding: 36px 24px;
     font-family: var(--poppins);
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
 }
 
 #content main .head-title {
@@ -504,8 +510,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
     #content {
         width: calc(100% - 60px);
+        left: 200px;
     }
     #content nav .nav-link {
         display: none;
@@ -538,5 +548,9 @@ body {
     #content nav form.show ~ .profile {
         display: none;
 
+    }
+
+    #content main .box-info {
+        grid-template-columns: 1fr;
     }
 }
